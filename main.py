@@ -21,8 +21,7 @@ screen.fill(color)
 
 screen.blit(target_image, (target_x, target_y))
 pygame.display.update()
-#print("event=" + str(pygame.quit))
-
+n_ok = 0
 
 fl_run = True
 while fl_run:
@@ -37,9 +36,8 @@ while fl_run:
                 target_x = random.randint(0, SCREEN_SIZE_X - target_width)
                 target_y = random.randint(0, SCREEN_SIZE_Y - target_height)
                 screen.blit(target_image, (target_x, target_y))
+                n_ok += 1
+                pygame.display.set_caption("Игра Тир  OK = " +str(n_ok))
                 pygame.display.update()
 
-
 pygame.quit()
-
-
